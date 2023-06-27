@@ -1,7 +1,26 @@
 <?php
+//Сессии. Сессии надо стартовать до того, как что-либо будет выведено на страницу
+session_start();
+
+//Куки и сессия в PHP
+$user_name = "Alex";
+//setcookie("user_name", $user_name, time() + 180);
+//print_r($_COOKIE);
+//echo $_COOKIE['user_name'];
+
+//Вывод сессии
+$_SESSION['user_name'] = $user_name;
+//убивает сессию
+//session_destroy();
+
+//удаление сессии по ключу
+//unset($_SESSION['user_name']);
+
+if($_SESSION['user_name'] == "Alex")
+    echo "Да, сессия установлена!";
 
 define("MY_AGE", 28, false);
-echo MY_AGE . '<br>';
+echo '<br>'. MY_AGE . '<br>';
 
 $years = '16  лет';
 $company = 'ООО Моя оборона';
