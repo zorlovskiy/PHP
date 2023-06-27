@@ -3,6 +3,7 @@
 $user_name = "Alex";
 setcookie("user_name", $user_name, time() +5);
 print_r($_COOKIE);
+
 $title = "Главная страница";
 //работа с датой
 //echo date('t F');
